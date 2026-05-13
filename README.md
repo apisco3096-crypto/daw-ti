@@ -1,5 +1,5 @@
 # Portafolio Profesional - Ariana Pisco
-## Ingeniera en TI e Investigadora
+## Ingeniera en TI 
 
 Este es mi proyecto de portafolio personal desarrollado con **Django**. Aquí comparto mis proyectos de ingeniería, biografía y formas de contacto.
 
