@@ -1,0 +1,42 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block title %}Portafolio{% endblock %}
+
+{% block header_image %}{% static 'core/img/about-bg.jpg' %}{% endblock %}
+
+{% block header_title %}Portafolio{% endblock %}
+
+{% block header_subtitle %}Mis proyectos realizados{% endblock %}
+
+{% block content %}
+<h1 class="my-4 text-center">Mis Proyectos</h1>
+
+<div class="row">
+    {% for project in projects %}
+    <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100">
+            <img class="card-img-top" src="{{ project.image.url }}" alt="{{ project.title }}" style="height: 200px; object-fit: cover;">
+
+            <div class="card-body">
+                <h4 class="card-title">{{ project.title }}</h4>
+                <p class="card-text">{{ project.description }}</p>
+            </div>
+
+            <div class="card-footer text-center">
+                {% if project.link %}
+                    <a href="{{ project.link }}" class="btn btn-primary" target="_blank">Visitar sitio</a>
+                {% else %}
+                    <span class="text-muted small">Sin enlace disponible</span>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% empty %}
+    <div class="col-12 text-center">
+        <p>Aún no hay proyectos en el portafolio. ¡Añade algunos desde el administrador!</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

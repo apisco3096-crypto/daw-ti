@@ -1,0 +1,21 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block title %}Acerca de - Ariana Pisco{% endblock %}
+
+{% block header_image %}{% static 'core/img/about-bg.jpg' %}{% endblock %}
+{% block header_title %}Acerca de{% endblock %}
+{% block header_subtitle %}Biografía{% endblock %}
+
+{% block content %}
+  <div class="row">
+    <div class="col-lg-4 col-md-4">
+      <img class="img-fluid avatar" src="{% static 'core/img/Ariana.jpeg' %}" alt="Avatar Ariana Pisco">
+    </div>
+    <div class="col-lg-8 col-md-8">
+      <h2 class="section-heading">Ariana Pisco</h2>
+      <p>Soy Ariana Pisco, tengo 20 años de edad, nacida en la ciudad de Portoviejo, soy estudiante de la carrera de Tecnología de la Información.</p>
+      <p>Este proyecto esta centrado en áreas clave como el desarrollo web utilizando el framework Django.</p>
+    </div>
+  </div>
+{% endblock %}
